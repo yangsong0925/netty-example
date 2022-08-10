@@ -1,4 +1,4 @@
-package nioExample.time;
+package time.nio;
 
 /**
  * @Classname TimeClient

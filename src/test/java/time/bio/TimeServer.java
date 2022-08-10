@@ -1,4 +1,4 @@
-package bioExample.time;
+package time.bio;
 
 import java.io.IOException;
 import java.net.ServerSocket;

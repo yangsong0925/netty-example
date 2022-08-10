@@ -1,4 +1,4 @@
-package nioExample.time;
+package time.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

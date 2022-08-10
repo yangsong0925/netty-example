@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package aioExample.time;
+package time.aio;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
