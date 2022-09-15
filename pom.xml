@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <disruptor.version>3.4.0</disruptor.version>
+        <disruptor.version>3.4.4</disruptor.version>
     </properties>
 
     <dependencies>
@@ -59,7 +59,12 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.1.20.Final</version>
+            <version>4.1.77.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.6</version>
         </dependency>
     </dependencies>
 
