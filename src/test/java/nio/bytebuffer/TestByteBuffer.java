@@ -1,4 +1,4 @@
-package bytebuffer.nio;
+package nio.bytebuffer;
 
 import com.syys.util.ByteBufferUtil;
 import org.junit.jupiter.api.Test;
