@@ -4,6 +4,7 @@ import com.syys.util.ByteBufferUtil;
 import org.junit.jupiter.api.Test;
 
 import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author yangsong
@@ -41,4 +42,58 @@ public class TestByteBuffer {
         ByteBufferUtil.debugAll(buffer);
     }
 
+    @Test
+    public void translate1(){
+        // 准备两个字符串
+        String str = "hello";
+
+
+        ByteBuffer buffer1 = ByteBuffer.allocate(16);
+        // 通过字符串的getByte方法获得字节数组，放入缓冲区中
+        buffer1.put(str.getBytes());
+        ByteBufferUtil.debugAll(buffer1);
+
+        // 将缓冲区中的数据转化为字符串
+        // 切换模式
+        buffer1.flip();
+
+        // 通过StandardCharsets解码，获得CharBuffer，再通过toString获得字符串
+        str = StandardCharsets.UTF_8.decode(buffer1).toString();
+        System.out.println(str);
+        ByteBufferUtil.debugAll(buffer1);
+    }
+
+    @Test
+    public void translate2(){
+        // 准备两个字符串
+        String str = "hello";
+
+        // 通过StandardCharsets的encode方法获得ByteBuffer
+        // 此时获得的ByteBuffer为读模式，无需通过flip切换模式
+        ByteBuffer buffer1 = StandardCharsets.UTF_8.encode(str);
+        ByteBufferUtil.debugAll(buffer1);
+
+        // 将缓冲区中的数据转化为字符串
+        // 通过StandardCharsets解码，获得CharBuffer，再通过toString获得字符串
+        str = StandardCharsets.UTF_8.decode(buffer1).toString();
+        System.out.println(str);
+        ByteBufferUtil.debugAll(buffer1);
+    }
+
+    @Test
+    public void translate3(){
+        // 准备两个字符串
+        String str = "hello";
+
+        // 通过StandardCharsets的encode方法获得ByteBuffer
+        // 此时获得的ByteBuffer为读模式，无需通过flip切换模式
+        ByteBuffer buffer1 = ByteBuffer.wrap(str.getBytes());
+        ByteBufferUtil.debugAll(buffer1);
+
+        // 将缓冲区中的数据转化为字符串
+        // 通过StandardCharsets解码，获得CharBuffer，再通过toString获得字符串
+        str = StandardCharsets.UTF_8.decode(buffer1).toString();
+        System.out.println(str);
+        ByteBufferUtil.debugAll(buffer1);
+    }
 }
