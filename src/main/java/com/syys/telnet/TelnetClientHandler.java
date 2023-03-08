@@ -1,4 +1,4 @@
-package example.telnet;
+package com.syys.telnet;
 
 /**
  * @author yangsong

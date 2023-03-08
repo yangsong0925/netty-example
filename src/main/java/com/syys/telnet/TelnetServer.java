@@ -1,4 +1,4 @@
-package example.telnet;
+package com.syys.telnet;
 
 /**
  * @author yangsong
@@ -12,7 +12,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.ssl.SslContext;
-import util.ServerUtil;
+import com.syys.util.ServerUtil;
 
 /**
  * Simplistic telnet server.

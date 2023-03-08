@@ -1,4 +1,4 @@
-package util;
+package com.syys.util;
 
 import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;

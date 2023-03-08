@@ -1,4 +1,4 @@
-package uptime;
+package com.syys.uptime;
 
 /**
  * @author yangsong

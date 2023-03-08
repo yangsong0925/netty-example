@@ -1,4 +1,4 @@
-package uptime;
+package com.syys.uptime;
 
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;

@@ -1,4 +1,4 @@
-package time.bio;
+package com.syys.time.bio;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

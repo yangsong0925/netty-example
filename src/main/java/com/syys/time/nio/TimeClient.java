@@ -1,20 +1,17 @@
-package time.nio;
-
-import java.io.IOException;
+package com.syys.time.nio;
 
 /**
- * @Classname TimeServer
+ * @Classname TimeClient
  * @Description TODO
  * @Date 2020/11/10 20:21
  * @Created by ys
  */
-public class TimeServer {
+public class TimeClient {
 
     /**
      * @param args
-     * @throws IOException
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         int port = 8080;
         if (args != null && args.length > 0) {
             try {
@@ -23,7 +20,7 @@ public class TimeServer {
                 // 采用默认值
             }
         }
-        MultiplexerTimeServer timeServer = new MultiplexerTimeServer(port);
-        new Thread(timeServer, "NIO-MultiplexerTimeServer-001").start();
+        new Thread(new TimeClientHandle("127.0.0.1", port), "TimeClient-001").start();
     }
+
 }
