@@ -7,7 +7,6 @@ import java.net.Socket;
 
 /**
  * @Classname TimeCilent
- * @Description TODO
  * @Date 2020/11/10 20:40
  * @Created by ys
  */
